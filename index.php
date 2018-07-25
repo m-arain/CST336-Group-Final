@@ -55,9 +55,9 @@
                 
                 <div class="form">
                     <form>
-                        <h2>Product</h2> <input type="text" name="product" placeholder="name"/>
+                        <h2>Product</h2> <input type="text" name="product"/>
                         <br/><br/>
-                        <h2>Description</h2> <input type="text" name="desc" />
+                        <h2>Description</h2> <input type="text" name="desc"/>
                         <br/><br/>
                         <!--<h2>Category</h2>-->
                         <!--    <select name="category" class="selectmenu">-->
@@ -65,13 +65,14 @@
                         <!--    </select>-->
                         <br/><br/>
                         <h2>Price</h2> 
-                        <h3>From <input type="text" name="priceFrom" class="textinput"/></h3>
-                        <h3>To   <input type="text" name="priceTo" class="textinput"/></h3>
+                        <span class="pricefromto">From <input type="text" name="priceFrom"/></span>
+                        <br/><br/>
+                        <span class="pricefromto">To   <input type="text" name="priceTo" /></span><br/>
                                
                         <br/>
                         <h2>Order by</h2>
                         <br/>
-                        <input type="radio" name="orderBy" value="name" class="radioinput"/><span>Name</span>
+                        <input type="radio" name="orderBy" value="name" /><span>Name</span>
                         &nbsp;&nbsp;
                         <input type="radio" name="orderBy" value="price" /><span>Price</span>
                         <br/><br/>
