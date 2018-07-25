@@ -1,3 +1,18 @@
+<?php
+
+    include 'php/dbConnection.php';
+    $conn = getDatabaseConnection();
+    
+    //createUser("Chrisasdasdasd Andaya", "candaya", "wow");
+    //addProduct("second Pro", "Da two fer two", 299.89);
+    //getProducts(); checks if form is set first, already being clled below form
+    //addCart(1,2);
+    //getUsersCart(1);
+    //removeItemCart(1,2);
+
+?>
+
+
 <!DOCTYPE html>
 <html>
     
@@ -39,8 +54,26 @@
                 </div>
                 
                 <div class="form">
-                    <input type="text" class="form-control" name="query" id="searchBar" placeholder="Search...">
-                    <input type="submit" value="Submit" class="btn btn-default">
+                     <h2>Product</h2> <input type="text" name="product" class="textinput"/><br/><br/>
+                    <h2>Description</h2> <input type="text" name="desc" class="textinput"/>
+                    <br/><br/>
+                    <!--<h2>Category</h2>-->
+                    <!--    <select name="category" class="selectmenu">-->
+                    <!--        <option value="">Select One</option>-->
+                    <!--    </select>-->
+                    <br/><br/>
+                    <h2>Price</h2> 
+                    <h3>From <input type="text" name="priceFrom" class="textinput"/></h3>
+                    <h3>To   <input type="text" name="priceTo" class="textinput"/></h3>
+                           
+                    <br/>
+                        <h2>Order by</h2>
+                    <br/>
+                    <input type="radio" name="orderBy" value="name" class="radioinput"/><span class="reddy">Name</span>
+                    &nbsp;&nbsp;
+                    <input type="radio" name="orderBy" value="price" /><span class="reddy">Price</span>
+                    <br/><br/>
+                    <input type="submit" name="searchForm" class="btn btn-primary"value="SEARCH"/>
                 </div>
                 
             </div>
@@ -59,6 +92,7 @@
                 <br /><br />
                 <h2>Products Found:</h2>
                 <h3> (this is where our searched products will appear) </h2>
+                    <?php getProducts(); ?>
                 <br /><br />
                 <hr>
             </div>
