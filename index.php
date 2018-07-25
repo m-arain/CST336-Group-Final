@@ -54,28 +54,30 @@
                 </div>
                 
                 <div class="form">
-                     <h2>Product</h2> <input type="text" name="product" class="textinput"/><br/><br/>
-                    <h2>Description</h2> <input type="text" name="desc" class="textinput"/>
-                    <br/><br/>
-                    <!--<h2>Category</h2>-->
-                    <!--    <select name="category" class="selectmenu">-->
-                    <!--        <option value="">Select One</option>-->
-                    <!--    </select>-->
-                    <br/><br/>
-                    <h2>Price</h2> 
-                    <h3>From <input type="text" name="priceFrom" class="textinput"/></h3>
-                    <h3>To   <input type="text" name="priceTo" class="textinput"/></h3>
-                           
-                    <br/>
+                    <form>
+                        <h2>Product</h2> <input type="text" name="product" placeholder="name"/>
+                        <br/><br/>
+                        <h2>Description</h2> <input type="text" name="desc" />
+                        <br/><br/>
+                        <!--<h2>Category</h2>-->
+                        <!--    <select name="category" class="selectmenu">-->
+                        <!--        <option value="">Select One</option>-->
+                        <!--    </select>-->
+                        <br/><br/>
+                        <h2>Price</h2> 
+                        <h3>From <input type="text" name="priceFrom" class="textinput"/></h3>
+                        <h3>To   <input type="text" name="priceTo" class="textinput"/></h3>
+                               
+                        <br/>
                         <h2>Order by</h2>
-                    <br/>
-                    <input type="radio" name="orderBy" value="name" class="radioinput"/><span class="reddy">Name</span>
-                    &nbsp;&nbsp;
-                    <input type="radio" name="orderBy" value="price" /><span class="reddy">Price</span>
-                    <br/><br/>
-                    <input type="submit" name="searchForm" class="btn btn-primary"value="SEARCH"/>
+                        <br/>
+                        <input type="radio" name="orderBy" value="name" class="radioinput"/><span>Name</span>
+                        &nbsp;&nbsp;
+                        <input type="radio" name="orderBy" value="price" /><span>Price</span>
+                        <br/><br/>
+                        <input type="submit" name="searchForm" class="btn btn-primary"value="SEARCH"/>    
+                    </form>
                 </div>
-                
             </div>
             
             
