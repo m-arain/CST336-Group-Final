@@ -13,7 +13,7 @@
     } 
 
 
-        $dbCon = new PDO("mysql:host=$host; dbname=$dbname", $username, $password);
+        $dbCon = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
         
         $dbCon -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $dbCon;
@@ -132,6 +132,8 @@
         $records = $stmt->execute($np);
         print_r($records);
     }
+    
+    
     
     
     

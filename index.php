@@ -31,21 +31,19 @@
         <div id= "utilNav">
         
         <br/> <br/> 
-         <form> 
-            <input type="submit" class = 'btn btn-primary' id="login-button" name ="login" value="Admin Login"/>
-            <!-- Add a Cart Button that aligns with the login button -->   
-            <button type="button" class="btn btn-default btn">
-              <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
-            </button>
-         </form> 
+        
+        <button class = 'btn btn-primary' id="login-button" onclick="location.href='php/login.php'" name ="login">Login</button>
+        <!-- Add a Cart Button that aligns with the login button -->   
+        <button type="button" class="btn btn-default btn">
+          <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+        </button>
+        
             <h1> ICS Electronics </h1>
         </div>
         
         
         <div id="bodyNav">
-            
-           
-            
+
             <hr>
             <div class="wrapper">
                 

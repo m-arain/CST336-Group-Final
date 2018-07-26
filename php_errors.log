@@ -1,0 +1,123 @@
+[26-Jul-2018 00:31:17 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''users' where username = 'candaya' AND password = '5bae372e69f5293eda5b478a2663f' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:31
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(31): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 31
+[26-Jul-2018 00:35:17 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''admin' where username = 'admin' AND password = '626e8934f9ce0e51ccc0bd5ca7985be' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:31
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(31): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 31
+[26-Jul-2018 00:37:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''admin' WHERE username = 'admin' AND password = '626e8934f9ce0e51ccc0bd5ca7985be' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:31
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(31): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 31
+[26-Jul-2018 00:42:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''admin' 
+            WHERE username = 'admin' 
+            AND password = '9d4e1' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:32
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(32): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 32
+[26-Jul-2018 00:43:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''admin' 
+            WHERE username = 'admin' 
+            AND password = '9d4e1' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:33
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(33): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 33
+[26-Jul-2018 00:45:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''admin' 
+            WHERE username = 'admin' 
+            AND password = '9d4e1' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:33
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(33): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 33
+[26-Jul-2018 00:45:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''users' 
+            WHERE username = 'candaya' 
+            AND password = '5ba' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:33
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(33): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 33
+[26-Jul-2018 00:47:02 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''admin' 
+            WHERE username = 'admin' 
+            AND password = '9d4e1' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:33
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(33): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 33
+[26-Jul-2018 00:48:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''users' 
+            WHERE username = 'candaya' 
+            AND password = SHA1' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:33
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(33): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 33
+[26-Jul-2018 00:51:55 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''users' 
+            WHERE username = 'canday' 
+            AND password = SHA1(' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:33
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(33): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 33
+[26-Jul-2018 00:52:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''users' 
+            WHERE username = 'candaya' 
+            AND password = SHA1' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:33
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(33): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 33
+[26-Jul-2018 00:53:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''users' 
+            WHERE username = 'candaya' 
+            AND password = SHA1' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:34
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(34): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 34
+[26-Jul-2018 00:54:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:34
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(34): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 34
+[26-Jul-2018 00:54:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:34
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(34): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 34
+[26-Jul-2018 00:54:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:34
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(34): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 34
+[26-Jul-2018 00:56:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:33
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(33): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 33
+[26-Jul-2018 00:57:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''users' WHERE username = 'candaya' AND password = '5bae372e69f5293eda5b478a2663f' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:31
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(31): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 31
+[26-Jul-2018 01:04:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:31
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(31): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 31
+[26-Jul-2018 01:05:05 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''users' WHERE username = 'candaya' AND password = '5bae372e69f5293eda5b478a2663f' at line 1' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:31
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(31): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 31
+[26-Jul-2018 01:08:51 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php:28
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/auth.php(28): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/auth.php on line 28
+[26-Jul-2018 02:59:13 UTC] PHP Fatal error:  Undefined class constant 'FETH_ASSOC' in /home/ubuntu/workspace/CST336-Group-Final/php/updateProduct.php on line 15
+[26-Jul-2018 02:59:13 UTC] PHP Stack trace:
+[26-Jul-2018 02:59:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/updateProduct.php:0
+[26-Jul-2018 02:59:13 UTC] PHP   2. displayProducts() /home/ubuntu/workspace/CST336-Group-Final/php/updateProduct.php:18
+[26-Jul-2018 03:12:10 UTC] PHP Parse error:  syntax error, unexpected '!', expecting ',' or ';' in /home/ubuntu/workspace/CST336-Group-Final/php/updateProduct.php on line 29

@@ -1,5 +1,9 @@
 <?php
     session_start();
+    
+    if(isset($_SESSION['username'])){
+        header("Location:logout.php");
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,10 +12,10 @@
     
     <body style="text-align:center;">
         <form method="POST" action="auth.php">
-            Username:<br> <input type="text" class="form-control center-input" name="username"/><br>
-            Password:<br> <input type="password" class="form-control center-input" name="password"/><br>
-            
-            <input type="submit" class="btn btn-primary" value="Submit"/>
+            <label for="userinput">Username</label><br> <input id="userinput" type="text" class="form-control center-input" name="username"/><br>
+            <label for="passinput">Password</label> <br> <input id="passinput" type="password" class="form-control center-input" name="password"/><br>
+            <label for="admin">Admin</label> <input id="admin" type="checkbox" name="isAdmin"/><br/>
+            <input type="submit" class="btn btn-primary" value="login"/>
             <?php
                 
                 if($_SESSION['incorrect']){
