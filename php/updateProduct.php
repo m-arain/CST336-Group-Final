@@ -7,6 +7,7 @@
         header("Location: login.php");
     }
     
+    //Display products with update and remove button
     function displayProducts(){
         global $conn;
         $sql = "SELECT * FROM product";
@@ -16,14 +17,38 @@
         
         foreach($results as $result){
             echo $result['name'] .
-            "<form><input type='hidden' name='updateId' value='".$result['id']."' /><input type='submit' name='updateProduct' value='Update'/></form>";
+            "<form>
+                <input type='hidden' name='updateId' value='".$result['id']."' />
+                <input type='submit' name='updateProduct' value='Update'/>
+                <input type='submit' name='removeProduct' value='Remove' id='removeBtn'/>
+            </form>";
+            
+            echo "<script>
+                    removeBtn = document.getElementById('removeBtn');                
+                    removeBtn.onclick = function(e){
+                        if(!window.confirm('Are you sure you want to remove this product?')){
+                            e.preventDefault();    
+                        }
+                    };
+                </script>";
         }
     }
     
-    
-    if(isset($_GET['updateProduct'])){
+    //Remove product
+    if(isset($_GET['removeProduct'])){
+       $sql = "DELETE FROM product where id = :id";
+       $np[':id'] = $_GET['updateId'];
+       $stmt = $conn->prepare($sql);
+       $result = $stmt->execute($np);
+       echo "$result product(s) removed.";
+    }
+    // else if Update product
+        // Display product form with pre populated data
+    // else if On that submit, make db query to update DB
+    // else displaly products
+    else if(isset($_GET['updateProduct'])){
         //query database and echo prefilled form
-        echo "Pre filled Form";
+        echo "Pre filled Form<br/>";
         $sql = "SELECT * FROM product WHERE id = ".$_GET['updateId'];
         $stmt = $conn->prepare($sql);
         $stmt->execute();
@@ -43,12 +68,31 @@
                 <input type='submit' name='updateForm' value='Update Product'/>
             </form> ";
     }else if(isset($_GET['updateForm'])){
-        echo "Updting Product!!!!";
+        echo "Updting Product!!!!<br/>";
         print_r($_GET);
         
         //sql to update product
         
+        $sql = "UPDATE product SET name=:name, description = :description, price = :price, category = :category WHERE id = :updateId";
+        $np = array(
+                ":name" => $_GET['name'],
+                ":description" => $_GET['desc'],
+                ":price" => $_GET['price'],
+                ":category" => $_GET['category'],
+                ":updateId" => $_GET['updateId']
+            );
+            
+        $stmt = $conn->prepare($sql);
+        $result = $stmt->execute($np);
         
+        if($result > 0){
+            echo "<br/>Update Successful <br/>";
+            echo "Updated $result record(s)<br/>";
+            echo "<br/><a href='admin.php'>Admin</a>";
+        }else{
+            echo "<br/>Update Unsuccessful<br/>";
+            echo "<br/><a href='updateProduct.php'>Retry</a>";
+        }
         
         
     }else{

@@ -24,6 +24,7 @@
         }
         
         
+        
     }
     
     
@@ -49,5 +50,6 @@
             
             <input type="submit" name="submit" value="Submit"/>
         </form>
+        <br/><a href='admin.php'>Admin</a>
     </body>
 </html>
