@@ -1,4 +1,4 @@
-
+/* index.php */
 
 body {
     text-align: center;
@@ -25,4 +25,13 @@ body {
 .form {
     margin-top: 85px;
     margin-left: 30px;
+}
+
+/*           */
+/* login.php */
+
+#logMeIn {
+    padding-left: 800px;
+    padding-right: 800px;
+    background-color: white;
 }
