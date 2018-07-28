@@ -1,8 +1,24 @@
 <?php
+    ///////////////////////////////////
+    ///
+    ///     File lifecycle
+    ///
+    ///////////////////////////////////
+    
+    //ISSUE: SCRIPT FOR CONFIRM NEEDS TIME TO LOAD, ELSE CLICKING REMOVE WILL INSTANTLY REMOVE WITHOUT WARNING
+    
+    // First, check if admin is logged in via session 'isAdmin'
+    // Second, check for form submission
+        // 1. removeProduct -> (product list button) confirm dialog, then delete query to DB
+        // 1. updateProduct -> (product list button) opens up pre filled form for a given updateId
+        // 1. removeForm -> This form will submit to update the product in DB
+    // If no form is submitted and admin is logged in, a list of products will be displayed
+    
     include 'dbConnection.php';
     session_start();
     $conn = getDatabaseConnection();
     
+    // Auth
     if(!$_SESSION['isAdmin']){
         header("Location: login.php");
     }
@@ -41,11 +57,7 @@
        $stmt = $conn->prepare($sql);
        $result = $stmt->execute($np);
        echo "$result product(s) removed.";
-    }
-    // else if Update product
-        // Display product form with pre populated data
-    // else if On that submit, make db query to update DB
-    // else displaly products
+    }//print update form
     else if(isset($_GET['updateProduct'])){
         //query database and echo prefilled form
         echo "Pre filled Form<br/>";
@@ -67,7 +79,8 @@
                 <input type='hidden' name='updateId' value='".$results['id']."'/>
                 <input type='submit' name='updateForm' value='Update Product'/>
             </form> ";
-    }else if(isset($_GET['updateForm'])){
+    }//Process Form
+    else if(isset($_GET['updateForm'])){
         echo "Updting Product!!!!<br/>";
         print_r($_GET);
         
@@ -93,9 +106,8 @@
             echo "<br/>Update Unsuccessful<br/>";
             echo "<br/><a href='updateProduct.php'>Retry</a>";
         }
-        
-        
-    }else{
+    }// Display product list
+    else{
         displayProducts();    
     }
     

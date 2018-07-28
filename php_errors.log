@@ -141,3 +141,42 @@ Stack trace:
 #0 /home/ubuntu/workspace/CST336-Group-Final/php/updateProduct.php(42): PDOStatement->execute(Array)
 #1 {main}
   thrown in /home/ubuntu/workspace/CST336-Group-Final/php/updateProduct.php on line 42
+[27-Jul-2018 22:59:15 UTC] PHP Warning:  include(php/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/CST336-Group-Final/php/cart.php on line 3
+[27-Jul-2018 22:59:15 UTC] PHP Stack trace:
+[27-Jul-2018 22:59:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/cart.php:0
+[27-Jul-2018 22:59:15 UTC] PHP Warning:  include(): Failed opening 'php/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/CST336-Group-Final/php/cart.php on line 3
+[27-Jul-2018 22:59:15 UTC] PHP Stack trace:
+[27-Jul-2018 22:59:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/cart.php:0
+[27-Jul-2018 22:59:15 UTC] PHP Warning:  include(php/userFunctions.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/CST336-Group-Final/php/cart.php on line 4
+[27-Jul-2018 22:59:15 UTC] PHP Stack trace:
+[27-Jul-2018 22:59:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/cart.php:0
+[27-Jul-2018 22:59:15 UTC] PHP Warning:  include(): Failed opening 'php/userFunctions.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/CST336-Group-Final/php/cart.php on line 4
+[27-Jul-2018 22:59:15 UTC] PHP Stack trace:
+[27-Jul-2018 22:59:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/cart.php:0
+[27-Jul-2018 22:59:15 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/CST336-Group-Final/php/cart.php on line 7
+[27-Jul-2018 22:59:15 UTC] PHP Stack trace:
+[27-Jul-2018 22:59:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/cart.php:0
+[28-Jul-2018 00:28:55 UTC] PHP Warning:  include(html/BSJQ.html): failed to open stream: No such file or directory in /home/ubuntu/workspace/CST336-Group-Final/php/cart.php on line 6
+[28-Jul-2018 00:28:55 UTC] PHP Stack trace:
+[28-Jul-2018 00:28:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/cart.php:0
+[28-Jul-2018 00:28:55 UTC] PHP Warning:  include(): Failed opening 'html/BSJQ.html' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/CST336-Group-Final/php/cart.php on line 6
+[28-Jul-2018 00:28:55 UTC] PHP Stack trace:
+[28-Jul-2018 00:28:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/cart.php:0
+[28-Jul-2018 00:28:58 UTC] PHP Warning:  include(html/BSJQ.html): failed to open stream: No such file or directory in /home/ubuntu/workspace/CST336-Group-Final/php/cart.php on line 6
+[28-Jul-2018 00:28:58 UTC] PHP Stack trace:
+[28-Jul-2018 00:28:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/cart.php:0
+[28-Jul-2018 00:28:58 UTC] PHP Warning:  include(): Failed opening 'html/BSJQ.html' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/CST336-Group-Final/php/cart.php on line 6
+[28-Jul-2018 00:28:58 UTC] PHP Stack trace:
+[28-Jul-2018 00:28:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/cart.php:0
+[28-Jul-2018 00:40:24 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/CST336-Group-Final/php/cart.php on line 45
+[28-Jul-2018 00:40:24 UTC] PHP Stack trace:
+[28-Jul-2018 00:40:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/cart.php:0
+[28-Jul-2018 00:40:54 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/CST336-Group-Final/php/cart.php on line 48
+[28-Jul-2018 00:40:54 UTC] PHP Stack trace:
+[28-Jul-2018 00:40:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/cart.php:0
+[28-Jul-2018 00:41:11 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/CST336-Group-Final/php/cart.php on line 48
+[28-Jul-2018 00:41:11 UTC] PHP Stack trace:
+[28-Jul-2018 00:41:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/cart.php:0
+[28-Jul-2018 00:41:13 UTC] PHP Fatal error:  Unsupported operand types in /home/ubuntu/workspace/CST336-Group-Final/php/cart.php on line 48
+[28-Jul-2018 00:41:13 UTC] PHP Stack trace:
+[28-Jul-2018 00:41:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/cart.php:0

@@ -11,38 +11,12 @@
         $username = $url["user"];
         $password = $url["pass"];
     } 
-
-
         $dbCon = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-        
         $dbCon -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $dbCon;
-        
     }
     
-    function createUser($name, $username, $password){
-        global $conn;
-        $np = array();
-        $np[":name"] = $name;
-        $np[":username"] = $username;
-        $np[":pass"] = $password;
-        $sql = "INSERT INTO users (id, name, invoice, username, password) VALUES (NULL, :name, 0, :username, SHA1(:pass))";
-        $stmt = $conn->prepare($sql);
-        $records = $stmt->execute($np);
-    };
-    
-    function addProduct($name, $desc, $price){
-        global $conn;
-        $sql = "INSERT INTO product (id, name, description, price) VALUES (NULL, :name, :desc, :price)";
-        $np = array();
-        $np[':name'] = $name;
-        $np[':desc'] = $desc;
-        $np[':price'] = $price;
-        $stmt = $conn->prepare($sql);
-        $records = $stmt->execute($np);
-        print_r($records);
-    }
-    
+   
     function getProducts(){
         global $conn;
         
@@ -86,52 +60,35 @@
              $stmt = $conn->prepare($sql);
             $stmt->execute($namedParameters);
             $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            print_r($records);
+
             return $records;
         }
-    };
-    
-    function addCart($userid, $product){
-        global $conn;
-        $sql = "INSERT INTO cart (id, username, product) VALUES (NULL, :userid, :product)";
-        $np = array();
-        $np[':userid'] = $userid;
-        $np[':product'] = $product;
-        
-        $stmt = $conn->prepare($sql);
-        $records = $stmt->execute($np);
-        print_r($records);
     }
     
-    function getUsersCart($userid){
-        
-        global $conn;
-        $sql = "SELECT users.username, product.name, product.description, product.price FROM cart
-                inner join users on cart.username = users.id
-                inner join product on cart.product = product.id
-                where cart.username =:userid";
-        $np[":userid"] = $userid;
-        $stmt = $conn->prepare($sql);
-        $stmt->execute($np);
-        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        print_r($records);
-        $subtotal = 0;
-        foreach($records as $record){
-            $subtotal += $record['price'];
+    function printListItem($results, $addCart){
+        if($results){
+            foreach($results as $result){
+                echo $result['id'];
+                
+                echo $result['name']." ".$result['description']." ".$result['price']." ".$result['category'];
+                
+                if($addCart){
+                    echo "<form action='php/cart.php'>";
+                    echo "<input type='submit' name='addCart' class='btn btn-info' value='Add to Cart' class='btn btn-info'/>";  
+                }else{
+                    echo "<form>";
+                    echo "<input type='submit' name='rmCart' class='btn btn-danger' value='Rm from Cart' class='btn btn-danger'/>";  
+                }
+                 
+                echo "<input type='hidden' name='productId' value='".$result['id']."' />";
+                echo "</form>";
+            }   
+        }else{
+            echo "No items to display.";
         }
-        echo $subtotal;
-        return [$records, $subtotal];
     }
     
-    function removeItemCart($userid, $product){
-        global $conn;
-        $sql = "DELETE FROM cart WHERE username = :userid AND product = :product";
-        $np[':userid'] = $userid;
-        $np[':product'] = $product;
-        $stmt = $conn->prepare($sql);
-        $records = $stmt->execute($np);
-        print_r($records);
-    }
+   
     
     
     

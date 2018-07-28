@@ -37,11 +37,13 @@
     }else{
         $_SESSION["incorrect"] = false;
         if($isAdmin){
-            $_SESSION["username"] = $record['firstName']. " ". $record['lastName'];
+            $_SESSION["username"] = $record['name'];
+            $_SESSION['userId'] = $record['id'];
             $_SESSION['isAdmin'] = true;
             header("Location:admin.php");
         }else{
-            $_SESSION["username"] = $record['firstName']. " ". $record['lastName'];
+            $_SESSION["username"] = $record['name'];
+            $_SESSION['userId'] = $record['id'];
             header("Location:../index.php");
         }
     }

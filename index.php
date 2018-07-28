@@ -1,8 +1,17 @@
 <?php
 
     include 'php/dbConnection.php';
+        //getDatabaseConnection
+        //getProducts
+    include 'php/userFunctions.php';
+        //addCart
+        //removeItemCart
+        //getUsersCart
+        
     $conn = getDatabaseConnection();
     
+    
+    //Testing functions
     //createUser("Chrisasdasdasd Andaya", "candaya", "wow");
     //addProduct("second Pro", "Da two fer two", 299.89);
     //getProducts(); checks if form is set first, already being clled below form
@@ -34,7 +43,7 @@
         
         <button class = 'btn btn-primary' id="login-button" onclick="location.href='php/login.php'" name ="login">Login</button>
         <!-- Add a Cart Button that aligns with the login button -->   
-        <button type="button" class="btn btn-default btn">
+        <button type="button" class="btn btn-default btn" id="shoppingCart">
           <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
         </button>
         
@@ -93,7 +102,7 @@
                 <br /><br />
                 <h2>Products Found:</h2>
                 <h3> (this is where our searched products will appear) </h2>
-                    <?php getProducts(); ?>
+                    <?php printListItem(getProducts(), true); ?>
                 <br /><br />
                 <hr>
             </div>
@@ -112,5 +121,11 @@
         </footer>  
         <br />
         <br />
+        
+        <script type="text/javascript" >
+            $('#shoppingCart').on('click', function (){
+                window.location.href = 'php/cart.php';
+            });
+        </script>
     </body>
 </html>
