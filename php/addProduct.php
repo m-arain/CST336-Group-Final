@@ -22,9 +22,6 @@
         if($results == 1){
             echo "product added successfuly";
         }
-        
-        
-        
     }
     
     

@@ -65,22 +65,36 @@
         }
     }
     
-    function printListItem($results, $addCart){
+    
+    
+    function printCartItem($results){
         if($results){
             foreach($results as $result){
                 echo $result['id'];
                 
                 echo $result['name']." ".$result['description']." ".$result['price']." ".$result['category'];
-                
-                if($addCart){
-                    echo "<form action='php/cart.php'>";
-                    echo "<input type='submit' name='addCart' class='btn btn-info' value='Add to Cart' class='btn btn-info'/>";  
-                }else{
-                    echo "<form>";
-                    echo "<input type='submit' name='rmCart' class='btn btn-danger' value='Rm from Cart' class='btn btn-danger'/>";  
-                }
-                 
-                echo "<input type='hidden' name='productId' value='".$result['id']."' />";
+            
+                echo "<form>";
+                    echo "QTY <input type='number' name='updateQuantity' value='".$result['quantity']."' class=''/>"; 
+                    echo "<input type='submit' name='updateCart' value='Update Quantity' class='btn btn-info'/>";  
+                    echo "<input type='submit' name='rmCart' value='Rm from Cart' class='btn btn-danger'/>";  
+                    echo "<input type='hidden' name='cartId' value='".$result['id']."' />";
+                echo "</form>";
+            }   
+        }else{
+            echo "No items to display.";
+        }
+    }
+    
+    function printListItem($results){
+        if($results){
+            foreach($results as $result){
+                echo $result['id'];
+                echo $result['name']." ".$result['description']." ".$result['price']." ".$result['category'];
+                echo "<form action='php/cart.php'>";
+                    echo "<input type='submit' name='addCart' class='btn btn-info' value='Add to Cart' class='btn btn-info'/>";
+                    echo "QTY<input type='number' name='quantity' style='text-align:center;' value='1'/>";  
+                    echo "<input type='hidden' name='productId' value='".$result['id']."' />";
                 echo "</form>";
             }   
         }else{

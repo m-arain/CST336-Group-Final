@@ -15,6 +15,7 @@
     // If no form is submitted and admin is logged in, a list of products will be displayed
     
     include 'dbConnection.php';
+    include '../html/BSJQ.html';
     session_start();
     $conn = getDatabaseConnection();
     
@@ -32,20 +33,28 @@
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         foreach($results as $result){
+            echo "<div style='display:inline-flex;'>";
             echo $result['name'] .
             "<form>
                 <input type='hidden' name='updateId' value='".$result['id']."' />
                 <input type='submit' name='updateProduct' value='Update'/>
-                <input type='submit' name='removeProduct' value='Remove' id='removeBtn'/>
             </form>";
             
+            echo "<button id='rmBtn".$result['id']."'>Remove</button>";
+            
+            echo "</div><br/>";
+            
+            
             echo "<script>
-                    removeBtn = document.getElementById('removeBtn');                
-                    removeBtn.onclick = function(e){
-                        if(!window.confirm('Are you sure you want to remove this product?')){
-                            e.preventDefault();    
+                    $('#rmBtn".$result['id']."').on('click', function (e){
+                        console.log(e.target.id.substring(5));
+                        if(window.confirm('Are you sure you want to delete?')){
+                            $.get('updateProduct.php?removeProduct=1&updateId=".$result['id']."', function (data, res){
+                                console.log(data, status);
+                                window.location.href = 'updateProduct.php';       
+                            });
                         }
-                    };
+                    });
                 </script>";
         }
     }
@@ -57,6 +66,7 @@
        $stmt = $conn->prepare($sql);
        $result = $stmt->execute($np);
        echo "$result product(s) removed.";
+       
     }//print update form
     else if(isset($_GET['updateProduct'])){
         //query database and echo prefilled form

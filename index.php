@@ -102,7 +102,7 @@
                 <br /><br />
                 <h2>Products Found:</h2>
                 <h3> (this is where our searched products will appear) </h2>
-                    <?php printListItem(getProducts(), true); ?>
+                    <?php printListItem(getProducts()); ?>
                 <br /><br />
                 <hr>
             </div>
