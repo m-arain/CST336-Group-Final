@@ -7,9 +7,9 @@
         //addCart
         //removeItemCart
         //getUsersCart
-        
+    session_start();
     $conn = getDatabaseConnection();
-    
+    $isLoggedIn = isset($_SESSION['username']);
     
     //Testing functions
     //createUser("Chrisasdasdasd Andaya", "candaya", "wow");
@@ -41,7 +41,7 @@
         
         <br/> <br/> 
         
-        <button class = 'btn btn-primary' id="login-button" onclick="location.href='php/login.php'" name ="login">Login</button>
+        <button class = 'btn btn-primary' id="login-button" onclick="location.href='php/login.php'" name ="login"><?php echo ($isLoggedIn)?"Log Out":"Log In" ?></button>
         <!-- Add a Cart Button that aligns with the login button -->   
         <button type="button" class="btn btn-default btn" id="shoppingCart">
           <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart

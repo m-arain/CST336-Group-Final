@@ -92,9 +92,9 @@
                 echo $result['id'];
                 echo $result['name']." ".$result['description']." ".$result['price']." ".$result['category'];
                 echo "<form action='php/cart.php'>";
-                    echo "<input type='submit' name='addCart' class='btn btn-info' value='Add to Cart' class='btn btn-info'/>";
                     echo "QTY<input type='number' name='quantity' style='text-align:center;' value='1'/>";  
                     echo "<input type='hidden' name='productId' value='".$result['id']."' />";
+                    echo "<input type='submit' name='addCart' class='btn btn-info' value='Add to Cart' class='btn btn-info'/>";
                 echo "</form>";
             }   
         }else{

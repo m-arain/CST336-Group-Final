@@ -25,7 +25,7 @@
         $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         $subtotal = 0;
-        if($record){
+        if($records){
             foreach($records as $record){
                 $subtotal += $record['price']*$record['quantity'];
             }

@@ -17,7 +17,7 @@
     
         if(isset($_GET['rmCart'])){
             echo "Removing item from cart";
-            $result = removeItemCart($_GET['productId']);
+            $result = removeItemCart($_GET['cartId']);
             if($result > 0){
                 echo "<h2> Successfully removed product from cart.</h2>";
             }else{
@@ -64,9 +64,10 @@
         if($cartSubtotal > 0){
             $total = $cartSubtotal + $shipping + round($cartSubtotal*$tax, 2);    
             echo "Total: $$total";
+            printCheckout();
         }
         
-        printCheckout();
+         echo "<br/><br/> <a href='../index.php'>HOME</a>";
             
     }
     

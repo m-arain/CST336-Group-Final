@@ -13,7 +13,8 @@
         echo "Admins are not allowed to shop. <a href='admin.php'>ADMIN</a>";
     }
     if(isset($_GET['checkout'])){
-        checkout();    
+        checkout();
+        echo "<br/><br/> <a href='../index.php'>HOME</a>";
     }
     
     
