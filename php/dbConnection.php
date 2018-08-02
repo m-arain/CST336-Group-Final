@@ -65,7 +65,16 @@
         }
     }
     
-    
+     function printItemSummary($results){
+        if($results){
+            foreach($results as $result){
+                echo "<br/><h2>".$result['name']." ".$result['description']." $".
+                    $result['price']." ".$result['category']." QTY".$result['quantity']."</h2>";
+            }   
+        }else{
+            echo "No items to display.";
+        }
+    }
     
     function printCartItem($results){
         if($results){

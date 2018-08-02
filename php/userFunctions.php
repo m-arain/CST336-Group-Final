@@ -1,4 +1,6 @@
 <?php
+
+   
     function addCart($userid, $product, $quantity){
         global $conn;
         $sql = "INSERT INTO cart (id, username, product, quantity) VALUES (NULL, :userid, :product, :quantity)";
@@ -92,9 +94,12 @@
         $cartInfo = getUsersCart($_SESSION['userId']);
         $cartItems = $cartInfo[0];
         $cartSubtotal = $cartInfo[1];
+        $tax = 0.08;
+        $shipping = 5.00;
+        $total = plusSHH($cartSubtotal, $tax, $shipping);
         
         if($cartItems){
-             $index = 0;
+            $index = 0;
             $sql = "INSERT INTO purchaseHistory (invoice, username, product, quantity)
             VALUES";
             $np['invoice'] = getUserCurrentInvoice($_SESSION['userId'])['invoice'];
@@ -118,14 +123,19 @@
             
             if(updateUserInvoice($np['invoice']) > 0){
                 echo "Update Successful";
+                echo "Total: $$total";
             }else{
                 echo "Update Unsuccessful";
             }
+            return [$cartItems, $cartSubtotal];
         }else{
             echo "No items in cart to checkout";
         }
-       
-        
+    }
+    
+    //Plus shipping and handling
+    function plusSHH($subtotal, $taxRate, $shippingCost){
+        return $subtotal + $shippingCost + round($subtotal*$taxRate, 2);
     }
     
   

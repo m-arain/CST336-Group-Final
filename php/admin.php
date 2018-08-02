@@ -1,5 +1,5 @@
 <?php
-
+    include '../html/BSJQ.html';
     session_start();
     if($_SESSION['isAdmin']){
         echo "ADMIN LOGGED IN";
@@ -14,19 +14,22 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="../css/finalStyles.css" rel="stylesheet" type="text/css" />
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </head>
     <body id ="adminBody" style="text-align:center;">
         <h1> Admin Home </h1>
         <button id="addProduct">Add Product</button>
         <button id="updateProduct">Update Product</button>
+        
+        <form action="sqlViews.php">
+            <input type="submit" name="customerCartTotal" value="Customer Cart Total"/>
+            <input type="submit" name="AvgCost" value="Averge Product Cost"/>
+            <input type="submit" name="purchaseHistory" value="Purchase History"/>
+        </form>
+        
+        
+        
         <script type="text/javascript" >
             document.getElementById('addProduct').onclick = function (){
-                location.href = "addProduct.php";
+                location.href = "addProduct.php";CST336-Group-Final/php/admin.php
             };
             
             document.getElementById('updateProduct').onclick = function (){

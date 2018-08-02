@@ -13,8 +13,12 @@
         echo "Admins are not allowed to shop. <a href='admin.php'>ADMIN</a>";
     }
     if(isset($_GET['checkout'])){
-        checkout();
-        echo "<br/><br/> <a href='../index.php'>HOME</a>";
+        $cartData = checkout();
+        if($cartData[0]){
+            printItemSummary($cartData[0]);
+            echo "<h2>Total: $".$cartData[1]."</h2>";
+        }
+        echo "<br/><br/> <a href='../index.php'>HOME</a>";  
     }
     
     

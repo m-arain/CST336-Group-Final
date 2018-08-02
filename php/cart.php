@@ -56,13 +56,14 @@
         $data = getUsersCart($userId);
         $cartItems = $data[0];
         $cartSubtotal = $data[1];
+        
         $tax = 0.08;
         $shipping = 5.00;
         echo "<h1>".$_SESSION["username"]."'s cart!</h1>";
         
         printCartItem($cartItems);
         if($cartSubtotal > 0){
-            $total = $cartSubtotal + $shipping + round($cartSubtotal*$tax, 2);    
+            $total = plusSHH($cartSubtotal, $tax, $shipping);
             echo "Total: $$total";
             printCheckout();
         }

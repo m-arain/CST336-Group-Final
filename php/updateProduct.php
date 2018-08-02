@@ -44,7 +44,6 @@
             
             echo "</div><br/>";
             
-            
             echo "<script>
                     $('#rmBtn".$result['id']."').on('click', function (e){
                         console.log(e.target.id.substring(5));
