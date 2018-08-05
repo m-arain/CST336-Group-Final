@@ -16,7 +16,7 @@
         $cartData = checkout();
         if($cartData[0]){
             printItemSummary($cartData[0]);
-            echo "<h2>Total: $".$cartData[1]."</h2>";
+            echo "<h2>Total: $".plusSHH($cartData[1], 0.08, 5.00)."</h2>";
         }
         echo "<br/><br/> <a href='../index.php'>HOME</a>";  
     }

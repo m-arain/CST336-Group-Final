@@ -23,16 +23,12 @@
         print_r($records);
     }
     
-    
     function getPurchaseHistory(){
         global $conn;
         $sql = "SELECT * FROM Purchase_History";
-        
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
-        print_r($records);
         return $records;
     }
     
