@@ -356,3 +356,18 @@ Stack trace:
 #0 /home/ubuntu/workspace/CST336-Group-Final/php/sqlViews.php(25): PDOStatement->execute()
 #1 {main}
   thrown in /home/ubuntu/workspace/CST336-Group-Final/php/sqlViews.php on line 25
+[02-Aug-2018 23:06:44 UTC] PHP Fatal error:  Call to undefined function getPurchaseHistory() in /home/ubuntu/workspace/CST336-Group-Final/php/removeRecord.php on line 15
+[02-Aug-2018 23:06:44 UTC] PHP Stack trace:
+[02-Aug-2018 23:06:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/removeRecord.php:0
+[02-Aug-2018 23:07:08 UTC] PHP Fatal error:  Call to undefined function getPurchaseHistory() in /home/ubuntu/workspace/CST336-Group-Final/php/removeRecord.php on line 15
+[02-Aug-2018 23:07:08 UTC] PHP Stack trace:
+[02-Aug-2018 23:07:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/removeRecord.php:0
+[02-Aug-2018 23:07:15 UTC] PHP Fatal error:  Call to undefined function getPurchaseHistory() in /home/ubuntu/workspace/CST336-Group-Final/php/removeRecord.php on line 15
+[02-Aug-2018 23:07:15 UTC] PHP Stack trace:
+[02-Aug-2018 23:07:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/CST336-Group-Final/php/removeRecord.php:0
+[05-Aug-2018 22:21:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1395 Can not delete from join view 'store.Purchase_History'' in /home/ubuntu/workspace/CST336-Group-Final/php/adminFunctions.php:44
+Stack trace:
+#0 /home/ubuntu/workspace/CST336-Group-Final/php/adminFunctions.php(44): PDOStatement->execute(Array)
+#1 /home/ubuntu/workspace/CST336-Group-Final/php/removeRecord.php(21): removePurchaseHistory('6')
+#2 {main}
+  thrown in /home/ubuntu/workspace/CST336-Group-Final/php/adminFunctions.php on line 44
