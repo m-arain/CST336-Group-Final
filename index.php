@@ -39,27 +39,28 @@
         
         <div id= "utilNav">
         
-        <br/> <br/> 
+            <br/> <br/> 
         
-        <button class = 'btn btn-primary' id="login-button" onclick="location.href='php/login.php'" name ="login"><?php echo ($isLoggedIn)?"Log Out":"Log In" ?></button>
-        <!-- Add a Cart Button that aligns with the login button -->   
-        <button type="button" class="btn btn-default btn" id="shoppingCart">
-          <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
-        </button>
+            <button class = 'btn btn-primary' id="login-button" onclick="location.href='php/login.php'" name ="login"><?php echo ($isLoggedIn)?"Log Out":"Log In" ?></button>
+            <!-- Add a Cart Button that aligns with the login button -->   
+            <button type="button" class="btn btn-default btn" id="shoppingCart">
+              <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+            </button>
         
-            <h1> ICS Electronics, dba Computown </h1>
+            <br />
+            
+                
         </div>
         
         
         <div id="bodyNav">
 
             <hr>
+            <div class="image">
+                 <img id="logo" src="img/ICS_CompuTown.jpg" alt="logo"> 
+            </div>
             <div class="wrapper">
-                
-                <div class="image">
-                    <img id="logo" src="img/ICS_CompuTown.jpg" alt="logo"> 
-                </div>
-                <br />
+
                 
                 <div id="indexForm" class="form">
                     <form>
