@@ -63,8 +63,8 @@
         $stmt = $conn->prepare($sql);
         $stmt->execute($np);
         $record = $stmt->fetch(PDO::FETCH_ASSOC);
-        echo "INVOCIE: ";
-        print_r($record);
+        //echo "INVOCIE: ";
+        //print_r($record);
         return $record;
     }
     
@@ -113,17 +113,17 @@
             
             $stmt = $conn->prepare($sql);
             $results = $stmt->execute($np);
-            echo "INSERTED $results";
+            //echo "INSERTED $results";
             
             if(removeCartItems() > 0){
-                echo "Removed items";
+                //echo "Removed items";
             }else{
-                    echo "Removed zero items.";
+                //echo "Removed zero items.";
             }
             
             if(updateUserInvoice($np['invoice']) > 0){
-                echo "Update Successful";
-                echo "Total: $$total";
+                //echo "Update Successful";
+                //echo "Total: $$total";
             }else{
                 echo "Update Unsuccessful";
             }
