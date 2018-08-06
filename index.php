@@ -47,7 +47,7 @@
           <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
         </button>
         
-            <h1> ICS Electronics </h1>
+            <h1> ICS Electronics, dba Computown </h1>
         </div>
         
         
@@ -57,7 +57,7 @@
             <div class="wrapper">
                 
                 <div class="image">
-                    <img id="logo" src="img/logoREPLACE.png" alt="logo"> 
+                    <img id="logo" src="img/ICS_CompuTown.jpg" alt="logo"> 
                 </div>
                 <br />
                 
