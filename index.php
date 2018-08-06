@@ -59,25 +59,26 @@
                 <div class="image">
                     <img id="logo" src="img/logoREPLACE.png" alt="logo"> 
                 </div>
+                <br />
                 
-                <div class="form">
+                <div id="indexForm" class="form">
                     <form>
-                        <h2>Product</h2> <input type="text" name="product"/>
-                        <br/><br/>
-                        <h2>Description</h2> <input type="text" name="desc"/>
-                        <br/><br/>
+                        <h2>Search</h2>
+                        Product <input type="text" name="product"/>
+                        <!--Description <input type="text" name="desc"/>-->
+                        <br/>
                         <!--<h2>Category</h2>-->
                         <!--    <select name="category" class="selectmenu">-->
                         <!--        <option value="">Select One</option>-->
                         <!--    </select>-->
-                        <br/><br/>
+                        <br/>
                         <h2>Price</h2> 
                         <span class="pricefromto">From <input type="text" name="priceFrom"/></span>
-                        <br/><br/>
+                        
                         <span class="pricefromto">To   <input type="text" name="priceTo" /></span><br/>
                                
                         <br/>
-                        <h2>Order by</h2>
+                        <h3>Order by</h3>
                         <br/>
                         <input type="radio" name="orderBy" value="name" /><span>Name</span>
                         &nbsp;&nbsp;
@@ -100,8 +101,6 @@
             <div id="searched-products">
                 <hr>
                 <br /><br />
-                <h2>Products Found:</h2>
-                <h3> (this is where our searched products will appear) </h2>
                     <?php printListItem(getProducts()); ?>
                 <br /><br />
                 <hr>
@@ -113,7 +112,7 @@
         
         
         <footer>
-            CST 336. 2018&copy; Walker <br />
+            CST 336. 2018&copy; Infinite Cascade Solutions <br />
             <strong>DISCLAIMER:</strong> The Information on this webpage is
             used for academic purposes only! <br /><br />
             <img id="csumb" src="img/csumb.png" alt="CSUMB" width="100">

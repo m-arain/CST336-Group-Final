@@ -19,8 +19,14 @@
     
     <body id="logInBody" style="text-align:center;">
         <h1> Log In </h1>
+        
         <div id="logMeIn">
             <hr>
+            <br /><br />
+            <!-- Log in information -->
+            
+            <strong>Admin Login -</strong> <strong>User:</strong> admin <strong>Pass:</strong> s3cr3t <br />
+            <strong>User Login -</strong> <strong>Username:</strong> user_1 <strong>Pass:</strong> s3cr3t <br />
             <br /><br />
             
             <form method="POST" action="auth.php">

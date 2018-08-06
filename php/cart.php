@@ -7,6 +7,14 @@
     
     $conn = getDatabaseConnection();
     
+    
+    
+    echo '<link href="../css/finalStyles.css" rel="stylesheet" type="text/css" />';
+    echo '<div id="cartIndex">';
+    
+    
+    
+    
     if(!isset($_SESSION['username'])){
         header("Location: login.php");
     }else if($_SESSION['isAdmin']){
@@ -14,6 +22,7 @@
          echo "<a href='admin.php'>ADMIN HOME</a>";
     }else{
         $userId = $_SESSION['userId'];
+        
     
         if(isset($_GET['rmCart'])){
             echo "Removing item from cart";
@@ -57,19 +66,28 @@
         $cartItems = $data[0];
         $cartSubtotal = $data[1];
         
+        //Added html for cart.php display
+        echo '<div id= "utilNav">';
+        
         $tax = 0.08;
         $shipping = 5.00;
         echo "<h1>".$_SESSION["username"]."'s cart!</h1>";
         
+        echo '</div>';
+        echo '<div id="bodyNav">';
+        echo '<br /><br />';
+        
         printCartItem($cartItems);
         if($cartSubtotal > 0){
             $total = plusSHH($cartSubtotal, $tax, $shipping);
-            echo "Total: $$total";
+            echo "<h3>Total: $$total</h3>";
             printCheckout();
         }
         
          echo "<br/><br/> <a href='../index.php'>HOME</a>";
-            
+        echo "</div>";
+        echo "</div>";
+        //
     }
     
 ?>

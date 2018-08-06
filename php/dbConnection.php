@@ -79,14 +79,14 @@
     function printCartItem($results){
         if($results){
             foreach($results as $result){
-                echo $result['id'];
-                
-                echo $result['name']." ".$result['description']." ".$result['price']." ".$result['category'];
             
                 echo "<form>";
+                    echo '<strong>';
+                    echo $result['name']." ".$result['price']." ".$result['category'];
+                    echo '</strong>';
                     echo "QTY <input type='number' name='updateQuantity' value='".$result['quantity']."' class=''/>"; 
                     echo "<input type='submit' name='updateCart' value='Update Quantity' class='btn btn-info'/>";  
-                    echo "<input type='submit' name='rmCart' value='Rm from Cart' class='btn btn-danger'/>";  
+                    echo "<input type='submit' name='rmCart' value='Remove' class='btn btn-danger'/>";  
                     echo "<input type='hidden' name='cartId' value='".$result['id']."' />";
                 echo "</form>";
             }   
@@ -98,10 +98,9 @@
     function printListItem($results){
         if($results){
             foreach($results as $result){
-                echo $result['id'];
-                echo $result['name']." ".$result['description']." ".$result['price']." ".$result['category'];
                 echo "<form action='php/cart.php'>";
-                    echo "QTY<input type='number' name='quantity' style='text-align:center;' value='1'/>";  
+                 echo $result['name']." ".$result['description']." ".$result['price'];
+                    echo " QTY <input type='number' name='quantity' style='text-align:center;' value='1'/>";  
                     echo "<input type='hidden' name='productId' value='".$result['id']."' />";
                     echo "<input type='submit' name='addCart' value='Add to Cart' class='btn btn-info'/>";
                 echo "</form>";

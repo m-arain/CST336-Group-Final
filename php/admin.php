@@ -1,3 +1,5 @@
+
+
 <?php
     include '../html/BSJQ.html';
  
@@ -15,8 +17,16 @@
 
 <!DOCTYPE html>
 <html>
+    <link href="../css/finalStyles.css" rel="stylesheet" type="text/css" />
+    
+    
     <body id ="adminBody" style="text-align:center;">
-        <h1> Admin Home </h1>
+        
+            <h1> Admin Home </h1>
+            
+        
+        <div id='bodyNav'> <!-- changes body to white -->
+        
         <button id="addProduct">Add Product</button>
         <button id="updateProduct">Update/Remove Product</button><br/>
         <br/>
@@ -42,5 +52,6 @@
             
             
         </script>
+        </div>
     </body>
 </html>
