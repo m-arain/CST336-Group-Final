@@ -99,25 +99,32 @@
         if($results){
             foreach($results as $result){
                 echo "<form action='php/cart.php'>";
-                 echo $result['name']." ".$result['description']." ".$result['price'];
+                 echo $result['name']." ".$result['description']." $".$result['price'];
                     echo " QTY <input type='number' name='quantity' style='text-align:center;' value='1'/>";  
                     echo "<input type='hidden' name='productId' value='".$result['id']."' />";
                     echo "<input type='submit' name='addCart' value='Add to Cart' class='btn btn-info'/>";
                 echo "</form>";
             }   
         }else{
-            echo "No items to display.";
+            echo "Begin your search above...";
         }
     }
     
-    function printPurchaseHistory($results){
+    function printPurchaseHistory($results, $isRemove){
         if($results){
+            echo "User Purchase History";
             foreach($results as $result){
-                echo $result['invoice']." ".$result['username']." ".$result['name']." ".$result['quantity']." ".$result['subtotal'];
-                echo "<form>";
+                echo "<span class='field'> Invoice Number:</span> ".$result['invoice'].
+                     "<span class='field'> User:</span> ".$result['username'].
+                     "<span class='field'> Item:</span>  ".$result['name']."<br/>".
+                     "<span class='field'> QTY:</span>  ".$result['quantity'].
+                     "<span class='field'> SubTotal</span>  $".$result['subtotal'];
+                if($isRemove){
+                    echo "<form>";
                     echo "<input type='hidden' name='rmId' value='". $result['phId'] ."' />";
                     echo "<input type='submit' name='rmPurchaseHistory' value='Remove' class='btn btn-danger'/>";
-                echo "</form>";
+                echo "</form>";    
+                }
             }
         }else{
             echo "No results to display.";

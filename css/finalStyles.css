@@ -30,12 +30,19 @@ body {
 /*           */
 /* login.php */
 
-#logMeIn {
-    padding-left: 800px;
-    padding-right: 800px;
+.logMeIn {
+    margin: 0 auto;
     background-color: white;
+}
+.logMeIn input[type="text"], input[type="password"], input[type="submit"]{
+    width: 25%;
+    margin: 0 auto;
 }
 
 #indexForm {
   
+}
+
+.field{
+    color: blue;
 }

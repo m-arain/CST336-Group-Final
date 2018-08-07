@@ -20,7 +20,7 @@
     <body id="logInBody" style="text-align:center;">
         <h1> Log In </h1>
         
-        <div id="logMeIn">
+        <div class="logMeIn">
             <hr>
             <br /><br />
             <!-- Log in information -->

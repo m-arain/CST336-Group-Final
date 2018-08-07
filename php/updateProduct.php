@@ -24,6 +24,10 @@
         header("Location: login.php");
     }
     
+    function checkSelected($a, $b){
+        echo ($a == $b)? "selected":"";
+    }
+    
     //Display products with update and remove button
     function displayProducts(){
         global $conn;
@@ -79,12 +83,18 @@
                 Name <input type='text' name='name' value='".$results['name']."' /><br/>
                 Description <textarea name='desc' rows=2 cols=15 >".$results['description']."</textarea><br/>
                 price <input type='number' name='price' value='".$results['price']."' /><br/>
-                Category <select name='category'>
-                            <option value=''>Choose</option>
-                            <option value='1'>Cat1</option>
-                            <option value='2'>Cat2</option>
-                            <option value='3'>Cat3</option>
-                        </select><br/>
+                Category <select name='category'>";
+                            echo "<option value=''>Choose</option>";
+                            echo "<option value='1'";
+                                echo ($results['category']==1)?"selected":"";
+                                echo ">Cat1</option>";
+                            echo "<option value='2'";
+                                echo ($results['category']==2)?"selected":"";
+                                echo ">Cat2</option>";
+                            echo "<option value='3'";
+                                echo ($results['category']==3)?"selected":"";
+                                echo ">Cat3</option>";
+                        echo "</select><br/>
                 <input type='hidden' name='updateId' value='".$results['id']."'/>
                 <input type='submit' name='updateForm' value='Update Product'/>
             </form> ";

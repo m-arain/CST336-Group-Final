@@ -18,12 +18,19 @@
     }else if(isset($_GET['purchaseHistory'])){
         $sql .= "Purchase_History group by username, invoice";
     }
-    
-    echo $sql;
+  
     
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    if(isset($_GET['customerCartTotal'])){
+        $sql .= "All_Users_Cart_Total";
+    }else if(isset($_GET['AvgCost'])){
+        $sql .= "Product_Pice_Average";
+    }else if(isset($_GET['purchaseHistory'])){
+        printPurchaseHistory($results, false);
+    }
     
     
     print_r($results);

@@ -89,16 +89,7 @@
                     </form>
                 </div>
             </div>
-            
-            
-            <div id="item-of-the-day">
-                <hr>
-                <br /><br />
-                <h2> Item of the Day</h2>
-                <br /><br />
-            </div>
-            
-            
+
             <div id="searched-products">
                 <hr>
                 <br /><br />

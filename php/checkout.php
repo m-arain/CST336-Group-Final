@@ -22,6 +22,7 @@
     if(isset($_GET['checkout'])){
         $cartData = checkout();
         if($cartData[0]){
+            echo "<h1>Thank you for shopping with us!</h1>";
             printItemSummary($cartData[0]);
             echo "<h2>Total: $".plusSHH($cartData[1], 0.08, 5.00)."</h2>";
         }
