@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 05, 2018 at 11:49 PM
+-- Generation Time: Aug 07, 2018 at 02:37 AM
 -- Server version: 5.5.57-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.22
 
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`name`, `username`, `password`, `id`) VALUES
-('Da authority', 'admin', '9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684', 1);
+('', 'admin', '25ab86bed149ca6ca9c1c0d5db7c9a91388ddeab', 2);
 
 -- --------------------------------------------------------
 
@@ -85,8 +85,29 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `description`, `price`, `category`) VALUES
-(15, 'D Claws', 'sadsad', '987.00', '1'),
-(16, 'D Claws', 'asdsad', '654.00', '1');
+(17, 'HP Pavilion 21.5-Inc', 'It\'s time for a monitor that\'s worthy of your family\'s content. When you\'re looking for the best spe', '89.99', '1.2'),
+(18, 'HP Pavillion', 'The best money can buy', '89.99', '1.4'),
+(19, 'Samsung Tv', 'Watch tv like a sheep', '189.99', '1.3'),
+(20, 'ASUS Screen', 'The best money can buy', '29.99', '1.2'),
+(21, 'LG Phone', 'The best money can buy', '39.99', '2.2'),
+(22, 'EVGA 500', 'Buy this, you wont regret it.', '49.99', '1.6'),
+(23, 'EVGA 9000', 'The best product to pay for', '59.99', '1.2'),
+(24, 'EVGA Basic', 'The best money can buy', '69.99', '1.2'),
+(25, 'RoseWill Microphone', 'The best money can buy', '79.99', '1.1'),
+(26, 'Thermaltake', 'The best money can buy', '89.99', '1.2'),
+(27, 'Coller Master 5000', 'The best money can buy', '79.99', '1.2'),
+(28, 'Cooler Master Two', 'Keep it cool', '289.99', '1.3'),
+(29, 'GIGABITE Huge', 'Real Big storage', '489.99', '1.7'),
+(30, 'MSI GAMING', 'Gamer Keyboard, super load and annoying', '123.99', '1.7'),
+(31, 'AMD sucker', 'Like taking candy from a baby.', '45.99', '1.6'),
+(32, 'INTEL PRO i7', 'Super pro, make you pro. Buy and become Pro', '234.99', '1.5'),
+(33, '1337 Guide to Life', 'The best money can buy', '23.99', '1.4'),
+(34, 'Redragon regarding D', 'The best money can buy', '765.99', '2.2'),
+(35, 'Redragon: Return of ', 'The best money can buy', '876.99', '2.2'),
+(36, 'Apple iPhone 21', 'The newest and bestest', '67.99', '2.2'),
+(37, 'AGS', 'Made by Armadyl Himself', '24.99', '2.0'),
+(38, 'HP Envy', 'Laptop', '999.00', '1.7'),
+(39, 'Dragon Claws', 'Best spec weapon in all of OSRS!', '86.94', '1.3');
 
 -- --------------------------------------------------------
 
@@ -119,23 +140,7 @@ CREATE TABLE `purchaseHistory` (
 --
 
 INSERT INTO `purchaseHistory` (`id`, `invoice`, `username`, `product`, `quantity`) VALUES
-(5, 1, 1, 15, 1337),
-(7, 1, 1, 15, 12),
-(8, 1, 1, 15, 12),
-(9, 1, 1, 15, 12),
-(10, 2, 1, 15, 1),
-(11, 2, 1, 15, 1),
-(12, 3, 1, 15, 1337),
-(13, 4, 1, 15, 1),
-(14, 5, 1, 15, 2),
-(15, 6, 1, 15, 12),
-(16, 7, 1, 16, 1),
-(17, 8, 1, 16, 1),
-(18, 9, 1, 15, 1),
-(19, 10, 1, 16, 1),
-(20, 11, 1, 16, 1),
-(21, 12, 1, 16, 1),
-(22, 13, 1, 15, 2);
+(27, 1, 7, 37, 4);
 
 -- --------------------------------------------------------
 
@@ -171,8 +176,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `invoice`, `username`, `password`) VALUES
-(1, 'Chris Andaya', 14, 'candaya', '5bae372e69f5293eda5b478a2663f5330fe41631'),
-(6, 'user_1', 1, 'User 1', '25ab86bed149ca6ca9c1c0d5db7c9a91388ddeab');
+(1, 'Chris Andaya', 17, 'candaya', '5bae372e69f5293eda5b478a2663f5330fe41631'),
+(7, 'default user', 2, 'user_1', '25ab86bed149ca6ca9c1c0d5db7c9a91388ddeab');
 
 -- --------------------------------------------------------
 
@@ -247,31 +252,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `purchaseHistory`
 --
 ALTER TABLE `purchaseHistory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables

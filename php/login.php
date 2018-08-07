@@ -24,7 +24,7 @@
             <hr>
             <br /><br />
             <!-- Log in information -->
-            
+            <strong>NOTE:</strong>AJAX CALL IN updateProduct.php to delete product from DB.<br/>
             <strong>Admin Login -</strong> <strong>User:</strong> admin <strong>Pass:</strong> s3cr3t <br />
             <strong>User Login -</strong> <strong>Username:</strong> user_1 <strong>Pass:</strong> s3cr3t <br />
             <br /><br />

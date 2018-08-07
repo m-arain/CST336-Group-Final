@@ -80,6 +80,7 @@
         printCartItem($cartItems);
         if($cartSubtotal > 0){
             $total = plusSHH($cartSubtotal, $tax, $shipping);
+            echo "Tax: 8% Shipping: $$shipping";
             echo "<h3>Total: $$total</h3>";
             printCheckout();
         }

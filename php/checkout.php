@@ -24,6 +24,7 @@
         if($cartData[0]){
             echo "<h1>Thank you for shopping with us!</h1>";
             printItemSummary($cartData[0]);
+            echo "Tax: 8% Shipping: $5.00";
             echo "<h2>Total: $".plusSHH($cartData[1], 0.08, 5.00)."</h2>";
         }
         echo "<br/><br/> <a href='../index.php'>HOME</a>";  

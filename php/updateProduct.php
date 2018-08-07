@@ -24,6 +24,8 @@
         header("Location: login.php");
     }
     
+    echo "<a href='admin.php'>ADMIN</a>";
+    
     function checkSelected($a, $b){
         echo ($a == $b)? "selected":"";
     }
@@ -37,17 +39,18 @@
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         foreach($results as $result){
-            echo "<div style='display:inline-flex;'>";
-            echo $result['name'] .
-            "<form>
-                <input type='hidden' name='updateId' value='".$result['id']."' />
-                <input type='submit' name='updateProduct' value='Update'/>
-            </form>";
+            echo "<div>";
+            echo "<h2>".$result['name'] ."</h2>";
+            echo
+                "<form>
+                    <input type='hidden' name='updateId' value='".$result['id']."' />
+                    <input type='submit'  class='btn btn-primary' name='updateProduct' value='Update'/>
+                </form>";
             
-            echo "<button id='rmBtn".$result['id']."'>Remove</button>";
+            echo "<button id='rmBtn".$result['id']."' class='btn btn-danger'>Remove</button>";
             
             echo "</div><br/>";
-            
+            // AJAX GET REQUEST
             echo "<script>
                     $('#rmBtn".$result['id']."').on('click', function (e){
                         console.log(e.target.id.substring(5));
@@ -73,27 +76,51 @@
     }//print update form
     else if(isset($_GET['updateProduct'])){
         //query database and echo prefilled form
-        echo "Pre filled Form<br/>";
         $sql = "SELECT * FROM product WHERE id = ".$_GET['updateId'];
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $results = $stmt->fetch(PDO::FETCH_ASSOC);
-        print_r($results);
+        
+        //Sorry this so ugly
         echo "<form>
                 Name <input type='text' name='name' value='".$results['name']."' /><br/>
                 Description <textarea name='desc' rows=2 cols=15 >".$results['description']."</textarea><br/>
                 price <input type='number' name='price' value='".$results['price']."' /><br/>
                 Category <select name='category'>";
+                
                             echo "<option value=''>Choose</option>";
                             echo "<option value='1'";
                                 echo ($results['category']==1)?"selected":"";
-                                echo ">Cat1</option>";
+                                echo ">Parts</option>";
+                            echo "<option value='1.2'";
+                                echo ($results['category']==1.2)?"selected":"";
+                                echo ">Monitors</option>";
+                            echo "<option value='1.3'";
+                                echo ($results['category']==1.3)?"selected":"";
+                                echo ">Power</option>";
+                            echo "<option value='1.4'";
+                                echo ($results['category']==1.4)?"selected":"";
+                                echo ">Cases</option>";
+                            echo "<option value='1.5'";
+                                echo ($results['category']==1.5)?"selected":"";
+                                echo ">Motherboards</option>";
+                            echo "<option value='1.6'";
+                                echo ($results['category']==1.6)?"selected":"";
+                                echo ">Graphics Card</option>";
+                            echo "<option value='1.7'";
+                                echo ($results['category']==1.7)?"selected":"";
+                                echo ">CPU</option>";
                             echo "<option value='2'";
                                 echo ($results['category']==2)?"selected":"";
-                                echo ">Cat2</option>";
-                            echo "<option value='3'";
-                                echo ($results['category']==3)?"selected":"";
-                                echo ">Cat3</option>";
+                                echo ">Accessories</option>";
+                            echo "<option value='2.1'";
+                                echo ($results['category']==2.1)?"selected":"";
+                                echo ">Keybords</option>";
+                            echo "<option value='2.2'";
+                                echo ($results['category']==2.2)?"selected":"";
+                                echo ">Mice</option>";
+                            
+                                            
                         echo "</select><br/>
                 <input type='hidden' name='updateId' value='".$results['id']."'/>
                 <input type='submit' name='updateForm' value='Update Product'/>

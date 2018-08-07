@@ -24,6 +24,7 @@
         
             <h1> Admin Home </h1>
             
+            
         
         <div id='bodyNav'> <!-- changes body to white -->
         
@@ -32,7 +33,7 @@
         <br/>
         <form action="sqlViews.php">
             <input type="submit" name="customerCartTotal" value="Customer Cart Total"/>
-            <input type="submit" name="AvgCost" value="Averge Product Cost"/>
+            <input type="submit" name="AvgCost" value="Average Product Cost"/>
             <input type="submit" name="purchaseHistory" value="Purchase History"/>
         </form><br/>
         
@@ -40,7 +41,7 @@
             <input type="submit" name="showPurchaseHistory" value="Remove Purchase History"/>
         </form>
         
-        
+        <br/><a href="../index.php">HOME</a>
         <script type="text/javascript" >
             document.getElementById('addProduct').onclick = function (){
                 location.href = "addProduct.php";CST336-Group-Final/php/admin.php
